@@ -1,0 +1,579 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.listePokemon{
+width: 50rem;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+margin: 5rem 0;
+border-top: #5aaad0 1px solid;
+border-right: #5aaad0 1px solid;
+}
+
+.listePokemon span{
+    padding: .5rem 1rem;
+    border-bottom: #5aaad0 1px solid;
+    border-left: #5aaad0 1px solid;
+}
+
+.titreCol{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.buttonList{
+    background-color: #5aaad0;
+    display: flex;
+    justify-content: center;
+    border-bottom: #ffffff4b 1px solid!important;
+    border-left: #ffffff4b 1px solid!important;
+}
+
+.buttonList button{
+    border: none;
+    background: none;
+    color:#fff;
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: .15rem;
+
+}
+
+/* PAGE SHOW */
+
+.genContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(126,200,172);
+    background: linear-gradient(270deg, rgba(126,200,172,0.33239233193277307) 0%, rgba(23,102,101,0.29597776610644255) 100%);
+}
+
+.ShowContainer {
+    display:flex;
+    width: 50rem;
+    height: 30rem;
+    position: relative;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.FirstColor{
+    background-color: #7ec8ac;
+    width: 60%;
+    padding: 2rem;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.SecondColor{
+    width:40%;
+    background-color: #176665;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+
+.imgContainerPokemon{
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    z-index: 2;
+}
+
+.imgPokemon {
+    width: 17rem
+}
+.circle {
+    z-index: 1;
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    left: 35%;
+    top: 20%;
+    background-color: rgba(55, 116, 89, 0.293);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%
+}
+
+.InfosPokemon {
+    position: relative;
+    z-index: 2;
+}
+
+.niveau{
+    border-radius: 9999px;
+    background-color: #176665;
+    color: #fff;
+    padding: .3rem .7rem;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.nom{
+    font-size: 60px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-top: -1rem;
+}
+
+.type {
+    font-weight: 200;
+    color:#fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: -1rem;
+}
+
+.buttonsShow{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    flex-direction: column;
+    right: -2rem;
+}
+
+.containerBall button{
+    border: none;
+    background: none;
+    padding: .2rem .5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.pokeball {
+    width: 2rem;
+    height: fit-content;
+    position: relative;
+    z-index: 2;
+    transform: rotate(0);
+    transition: transform .4s ease-in-out;
+}
+
+.pokeball:hover {
+    transform: rotate(360deg);
+}
+
+.containerBall{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 9999px;
+    border: #176665 3px solid;
+}
+
+.buttonsShow a {
+    text-decoration: none;
+}
+
+.eclair{
+    background: rgb(242,228,125);
+    background: linear-gradient(270deg, rgba(242,228,125,0.33239233193277307) 0%, rgba(254,213,63,0.29597776610644255) 100%);
+}
+
+.normal {
+    background: rgb(245,235,224);
+    background: linear-gradient(270deg, rgba(245,235,224,0.444437149859944) 0%, rgba(213,189,175,0.38001137955182074) 100%);
+}
+
+.vol {
+    background: rgb(224,233,245);
+    background: linear-gradient(270deg, rgba(224,233,245,0.444437149859944) 0%, rgba(175,188,213,0.39401698179271705) 100%);
+}
+
+.poison {
+    background: rgb(162,110,196);
+    background: linear-gradient(270deg, rgba(162,110,196,0.444437149859944) 0%, rgba(92,83,98,0.444437149859944) 100%);
+}
+
+.sol{
+    background: rgb(237,214,147);
+    background: linear-gradient(270deg, rgba(237,214,147,0.4360337885154062) 0%, rgba(185,160,104,0.43323266806722693) 100%);
+}
+
+.roche{
+    background: rgb(191,189,176);
+    background: linear-gradient(270deg, rgba(191,189,176,0.413624824929972) 0%, rgba(132,126,130,0.43323266806722693) 100%);
+}
+
+.insecte{
+    background: rgb(192,207,106);
+    background: linear-gradient(270deg, rgba(192,207,106,0.4668461134453782) 0%, rgba(142,153,79,0.5200674019607843) 100%);
+}
+
+.acier {
+    background: rgb(176,180,187);
+    background: linear-gradient(270deg, rgba(176,180,187,0.486453956582633) 0%, rgba(131,133,139,0.46124387254901966) 100%);
+}
+
+.feu {
+    background: rgb(235,129,56);
+    background: linear-gradient(270deg, rgba(235,129,56,0.444437149859944) 0%, rgba(173,97,42,0.486453956582633) 100%);
+}
+.psy {
+    background: rgb(197,136,202);
+    background: linear-gradient(270deg, rgba(197,136,202,0.53687412464986) 0%, rgba(163,86,170,0.590095413165266) 100%);
+}
+
+.glace {
+    background: rgb(148,192,227);
+    background: linear-gradient(270deg, rgba(148,192,227,0.43883490896358546) 0%, rgba(60,89,128,0.4640449929971989) 100%);
+}
+
+.dragon {
+    background: rgb(124,155,204);
+    background: linear-gradient(270deg, rgba(124,155,204,0.4276304271708683) 0%, rgba(91,116,152,0.4360337885154062) 100%);
+}
+
+.tenebre{
+    background: rgb(183,183,183);
+    background: linear-gradient(270deg, rgba(183,183,183,0.4416360294117647) 0%, rgba(84,84,83,0.4584427521008403) 100%);
+}
+
+.fee{
+    background: rgb(237,202,224);
+    background: linear-gradient(270deg, rgba(237,202,224,0.5340730042016807) 0%, rgba(187,143,170,0.5424763655462185) 100%);
+}
+
+.eau {
+    background: rgb(109,170,213);
+    background: linear-gradient(270deg, rgba(109,170,213,0.5032606792717087) 0%, rgba(53,116,164,0.486453956582633) 100%);
+}
+
+.spectre {
+    background: rgb(97,98,135);
+    background: linear-gradient(270deg, rgba(97,98,135,0.53687412464986) 0%, rgba(74,73,100,0.5396752450980392) 100%);
+}
+
+.boutonClose{
+    position: absolute;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+    background-image: url('/assets/images/close.png');
+    background-position: center center;
+    background-size: contain;
+    transition: background-image .4s ease-in-out;
+}
+
+.boutonClose:hover{
+    background-image: url('/assets/images/closehover.png');
+}
+
+.btnClose {
+    border: none;
+    background: none;
+
+}
+
+.imgClose {
+    width: 3rem;
+    height: 3rem;
+    background-image: url('/public/assets/images/close.png');
+}
+
+
+/* PAGE EDIT */
+
+.InfosPokemon input {
+    outline: none;
+    background: none;
+    border: none;
+    padding: .10rem .5rem;
+    color: #fff;
+    margin: .5rem 0;
+}
+
+.niveauInput{
+    color: #fff;
+    display:flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.niveauInput label{
+    padding: .25rem 0;
+}
+
+.niveauInput input {
+    width:2rem;
+}
+
+.containerNomInput{
+    display: flex;
+    flex-direction: column;
+    color:#fff;
+}
+.containerNomInput label{
+    margin-bottom: -1rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid #fff;
+    width: fit-content;
+}
+.nomInput{
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    width: 17rem;
+    padding: 0!important;
+}
+
+.btnUpdate{
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+}
+
+.boutonUpdate{
+    border: none;
+    background: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: capitalize;
+    padding: .25rem .75rem;
+    border: 3px solid #fff;
+    transition: border .4s ease-in-out,
+                background-color .4s ease-in-out;
+}
+
+.boutonUpdate:hover{
+    background-color: rgba(255, 255, 255, 0.449);
+    text-transform: capitalize;
+    padding: .25rem .75rem;
+    border: 3px solid #fff;
+    color: #ffffff;
+}
+
+.fileInput{
+    border: none!important;
+    padding: 0!important;
+}
+
+
+.fileInput::-webkit-file-upload-button {
+    background: none;
+    border: none!important;
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    padding: .5rem 1rem .5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.449);
+}
+
+.InfosPokemon select{
+    color:  #fff;
+    height: 2.5rem;
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, 0.449);
+    border: none;
+    transition: border-bottom 400ms ease-in-out;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+    border-right: .5rem solid transparent;
+
+}
+
+.InfosPokemon select:focus{
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+/* NAVBAR */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lienNav{
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.navbar{
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+/* HOME */
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/images/bgHeader.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titreContainer{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    background-color: #fff;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.titreContainer::before{
+    position: absolute;
+    content: '';
+    height: 8.27rem;
+    width: 1px;
+    top: 0;
+    background-color: #e9e5de;
+
+}
+.titreContainer::after{
+    position: absolute;
+    content: '';
+    height: 8.27rem;
+    width: 1px;
+    bottom: -0.5rem;
+    background-color: #e9e5de;
+
+}
+
+.titre{
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 1rem;
+    letter-spacing: .3rem;
+    color:#fff;
+    background: rgb(233,229,222);
+    background: radial-gradient(circle, rgba(233,229,222,1) 0%, rgba(90,170,208,1) 66%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+
+}
+
+.titreContainer h4{
+    font-weight: 200;
+    margin-top: -2rem;
+    font-style: italic;
+}
+
+.formContainer{
+    width: 50rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 3rem;
+    margin-top: -3rem;
+    z-index: 4;
+
+}
+
+.formContainer div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formContainer Input{
+    width: 17rem;
+    padding: .5rem 1rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #5aaad0;
+    background-color: #ebebeb74;
+    transition: border-bottom 400ms ease-in-out;
+}
+
+.formContainer input:focus{
+    outline: none;
+    border-bottom: 3px solid #5aaad0;;
+}
+
+
+.formContainer select{
+    width: 17rem;
+    padding: .5rem 1rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #5aaad0;
+    background-color: #ebebeb74;
+    border-right: .5rem solid transparent;
+    transition: border-bottom 400ms ease-in-out;
+}
+
+.formContainer select:focus{
+    outline: none;
+    border-bottom: 3px solid #5aaad0;
+}
+
+.InputForm{
+    border:none!important;
+    background-color: #ebebeb74!important;
+    padding: 0!important;
+    height: auto!important;
+}
+
+.InputForm::-webkit-file-upload-button{
+    outline: none;
+    border: none!important;
+    background-color: #5aaad0;
+    padding: 1rem .5rem;
+    margin-right: 1rem;
+    color: #fff;
+    font-weight: 800;
+    text-transform: lowercase;
+}
+
+.formContainer button{
+    border:2px solid transparent;
+    background: none;
+    background-color: #5aaad0;
+    padding: .5rem 1rem;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 2rem;
+    transition: border .4s ease-in-out,
+                background-color .4s ease-in-out,
+                font-weight .4s ease-in-out;
+}
+
+.formContainer button:hover{
+    border: 3px solid  #5aaad0;
+    color:  #5aaad0;
+    background-color: #fff;
+    font-weight: 800;
+}
